@@ -35,8 +35,8 @@ public class CaesarCiphur {
 				keyAdded -= alpha.length();
 			}
 			
-			System.out.println("Encoded text is: " + alpha.charAt(keyAdded));
-			
+			//System.out.println("Encoded text is: " + alpha.charAt(keyAdded));
+			secretText += alpha.charAt(keyAdded);
 		}
 		
 		return secretText;
