@@ -10,7 +10,7 @@ public class BeginHere {
 		CaesarCiphur myCiphur = new CaesarCiphur();
 		
 		System.out.println("Please enter plain text to ciphur.");
-		String plainText = kbd.nextLine();
+		String plainText = kbd.nextLine().toLowerCase();
 		
 		System.out.println("Please enter a key:");
 		int key = kbd.nextInt();

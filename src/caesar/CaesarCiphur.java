@@ -2,7 +2,7 @@ package caesar;
 
 public class CaesarCiphur {
 	
-	private String alpha = "abcdefghijklmnopqrstuvwxyz";
+	private String alpha = "abcdefghijklmnopqrstuvwxyz 0123456789";
 
 	public String encode(String plainText, int key) {
 		
