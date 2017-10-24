@@ -7,7 +7,7 @@ public class CaesarCiphur {
 	public String encode(String plainText, int key) {
 		
 		String secretText = "";
-		int index, keyadded;
+		int index, keyAdded;
 		
 		System.out.println("Test alpha length = " + alpha.length());
 		System.out.println("The first char is: " + alpha.charAt(0));

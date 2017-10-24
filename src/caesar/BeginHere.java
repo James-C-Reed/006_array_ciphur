@@ -16,7 +16,7 @@ public class BeginHere {
 		int key = kbd.nextInt();
 		System.out.println("Your key is: " + key);
 		
-		String codedText = myCiphur.encode(plainText);
+		String codedText = myCiphur.encode(plainText, key);
 		System.out.println("Your secret message is:" + codedText);
 		
 	}
