@@ -30,6 +30,11 @@ public class CaesarCiphur {
 			System.out.println("index = " + index);
 			
 			keyAdded = index + key;
+			
+			if (keyAdded >= 26) {
+				keyAdded -= 26;
+			}
+			
 			System.out.println("Encoded text is: " + alpha.charAt(keyAdded));
 			
 		}
