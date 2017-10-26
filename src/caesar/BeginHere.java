@@ -15,18 +15,21 @@ public class BeginHere {
 		/*Object[] possibilities = {"encode", "decode", "crack", "exit"};
 		String s = (String)JOptionPane.showInputDialog(
 				null,
-				"please make your selection",
+				"Please make your selection",
 				"Start Here",
 				JOptionPane.PLAIN_MESSAGE,
-				possibilities 	
+				possibilities,
+				"encode");
 		*/
 		Scanner kbd = new Scanner(System.in);
 		
 		CaesarCiphur myCiphur = new CaesarCiphur();
 		
+		String msg = "Please enter plain text to ciphur.";
 		//System.out.println("Please enter plain text to ciphur.");
 		String plainText = kbd.nextLine().toLowerCase();
 		
+		String msg = 
 		//System.out.println("Please enter a key:");
 		int key = kbd.nextInt();
 		
