@@ -1,5 +1,3 @@
-
-
 package caesar;
 
 import java.util.Scanner;
@@ -55,14 +53,19 @@ public class BeginHere {
 		Scanner kbd = new Scanner(System.in);
 		CaesarCipher myCipher = new CaesarCipher();
 
-		System.out.println("Please enter the plain text to encode:");
-		String plainText = kbd.nextLine().toLowerCase();
-
+		//System.out.println("Please enter the plain text to encode:");
+		//String plainText = kbd.nextLine().toLowerCase();
+		
+		JOptionPane.showMessageDialog(null, "(new)Please enter the plain text to encode:");
+		String plainText = JOptionPane.showInputDialog("Please enter plain text").toLowerCase();
+		JOptionPane.showMessageDialog(null, "You have entered this for plain text: " + plainText);
+		
+				
 		System.out.println("Please enter the key:");
 		int key = kbd.nextInt();
 		// System.out.println("Your key is: " + key);
 
-		String codedText = myCipher.encode(plainText, key);
+		String codedText = myCipher.encode("plainText", key);
 		System.out.println("Your secret message is: " + codedText);
 
 	}
