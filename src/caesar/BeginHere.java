@@ -25,35 +25,44 @@ public class BeginHere {
 
 		switch (selection) { // switch on String allowed in Java 7 and higher
 		case "Encoder":
-			JOptionPane.showMessageDialog(null, 
-					"We are now in the Encoder switch block - add some code!");
 			
-			//Scanner kbd = new Scanner(System.in);
-			//CaesarCipher myCipher = new CaesarCipher();
+			CaesarCipher myCipher = new CaesarCipher();
 
-			//System.out.println("Please enter the plain text to encode:");
-			//String plainText = kbd.nextLine().toLowerCase();
-			
 			JOptionPane.showMessageDialog(null, "(new)Please enter the plain text to encode:");
 			String plainText = JOptionPane.showInputDialog("Please enter plain text: ").toLowerCase();
 			JOptionPane.showMessageDialog(null, "You have entered this for plain text: " + plainText);
 			
-					
-			System.out.println("Please enter the key:");
-			int key = kbd.nextInt();
-			// System.out.println("Your key is: " + key);
-
-			String codedText = myCipher.encode("plainText", key);
-			System.out.println("Your secret message is: " + codedText);
+			int key = Integer.parseInt( JOptionPane.showInputDialog("Please enter the key:"));
+			
+			String codedText = myCipher.encode(plainText, key);
+			JOptionPane.showMessageDialog(null, "Your secret message is: " + codedText);
 			
 			break;
+			//JOptionPane.showMessageDialog(null, "We are now in the Encoder switch block - add some code!");
+			//Scanner kbd = new Scanner(System.in);
+			//System.out.println("Please enter the plain text to encode:");
+			//String plainText = kbd.nextLine().toLowerCase();
+			//JOptionPane.showMessageDialog(null, "Please enter the key:");
+			//int key = kbd.nextInt();
+			// System.out.println("Your key is: " + key);
 			//break means all done, leave the switch block - almost always use break
 			//if no break, execution continues for all remaining cases
 		
 		
 		case "Decoder":
-			JOptionPane.showMessageDialog(null, 
-				"We are now in the Decoder switch block - add some code!");
+			//JOptionPane.showMessageDialog(null, "We are now in the Decoder switch block - add some code!");
+			
+			CaesarDecipher myDecipher = new CaesarDecipher();
+
+			JOptionPane.showMessageDialog(null, "Please enter the coded text to decode:");
+			String initText = JOptionPane.showInputDialog("Please enter coded text: ").toLowerCase();
+			JOptionPane.showMessageDialog(null, "You have entered this for coded text: " + initText);
+			
+			int key2 = Integer.parseInt( JOptionPane.showInputDialog("Please enter the key:"));
+			
+			String newText = myDecipher.encode(initText, key2);
+			JOptionPane.showMessageDialog(null, "Your message is: " + newText);
+			
 			break;
 		
 		
